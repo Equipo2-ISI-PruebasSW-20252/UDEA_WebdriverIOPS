@@ -26,3 +26,8 @@ Then(/^I should see a text saying (.*)$/, async (message) => {
     await expect($('.title')).toHaveTextContaining(message);
   }
 });
+
+Then('login button is disable if username or password is empty', async () => {
+  const result = await LoginPage.emptyFields();
+  await expect(result).toBeFalsy();
+});
