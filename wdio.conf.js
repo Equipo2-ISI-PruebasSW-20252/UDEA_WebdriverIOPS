@@ -22,7 +22,7 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './features/**/account.feature'
+        './features/**/transfer.feature'
     ],
     // Patterns to exclude.
     exclude: [
