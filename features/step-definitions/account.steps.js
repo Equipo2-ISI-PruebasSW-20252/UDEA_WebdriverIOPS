@@ -1,14 +1,6 @@
-import { Given, When, Then } from "@wdio/cucumber-framework";
+import { When, Then } from "@wdio/cucumber-framework";
 
 import AccountPage from '../pageobjects/account.page.js';
-import LoginPage from "../pageobjects/login.page.js";
-
-Given('I am logged in with valid credentials', async () => {
-    await LoginPage.open();
-    await LoginPage.login("john", "demo");
-    await expect($("//h1[normalize-space()='Accounts Overview']")).toBeExisting();
-    await expect(browser).toHaveUrlContaining('overview.htm');
-});
 
 Then('I should see the account overview page', async () => {
     const result = await AccountPage.verifyUser("Accounts Overview");

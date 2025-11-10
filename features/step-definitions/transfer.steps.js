@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@wdio/cucumber-framework";
+import { When, Then } from "@wdio/cucumber-framework";
 
 import TransferPage from '../pageobjects/transfer.page.js';
 
