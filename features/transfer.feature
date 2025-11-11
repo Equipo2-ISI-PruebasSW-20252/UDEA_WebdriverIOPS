@@ -17,7 +17,7 @@ Feature: Transfer Funds Between Accounts
 
     Examples:
       | amount | fromAccount | toAccount |
-      | 100    | 14121       | 14676     |
+      | 100    | 12345       | 12456     |
 
   Scenario Outline: Validate insufficient funds
     When I navigate to the transfer funds page
@@ -29,7 +29,7 @@ Feature: Transfer Funds Between Accounts
 
     Examples:
       | amount  | fromAccount | toAccount |
-      | 1000000 | 14121       | 14676     |
+      | 1000000 | 12345       | 12456     |
 
   Scenario: Transfer button should validate required fields
     When I navigate to the transfer funds page
@@ -45,4 +45,4 @@ Feature: Transfer Funds Between Accounts
 
     Examples:
       | amount | account |
-      | 100    | 14121   |
+      | 100    | 12345   |
