@@ -1,8 +1,6 @@
 import LoginPage from '../pageobjects/login.page.js';
 
-export async function loginWithValidCredentials() {
-    console.log('Starting login process...');
-    
+export async function loginWithValidCredentials() {    
     await LoginPage.open();
     
     await LoginPage.login("john", "demo");
@@ -11,7 +9,6 @@ export async function loginWithValidCredentials() {
         async () => (await browser.getUrl()).includes('overview.htm'),
         {
             timeout: 10000,
-            timeoutMsg: 'No se pudo llegar a la página de overview'
         }
     );
     
