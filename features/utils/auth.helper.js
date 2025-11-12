@@ -4,12 +4,9 @@ export async function loginWithValidCredentials() {
     console.log('Starting login process...');
     
     await LoginPage.open();
-    await browser.pause(1000); // Pequeña pausa para asegurar que la página cargó
     
     await LoginPage.login("john", "demo");
-    await browser.pause(1000); // Pausa para asegurar que el login se procese
     
-    // Verificar que llegamos a la página correcta
     await browser.waitUntil(
         async () => (await browser.getUrl()).includes('overview.htm'),
         {
@@ -23,3 +20,4 @@ export async function loginWithValidCredentials() {
     
     console.log('Login completed successfully');
 }
+
