@@ -20,8 +20,8 @@ Feature: Bill Payment Service
     And I enter payment amount "<amount>"
     And I select account "<fromAccount>" as the payment source
     And I click the send payment button
-    Then I should see the bill payment confirmation message
-    And I should see the payment details with payee "<payeeName>" and amount "<amount>"
+    Then I should see the payment details with payee "<payeeName>" and amount "<amount>"
+    And I should see the bill payment confirmation message
 
     Examples:
       | payeeName       | address        | city       | state | zipCode | phone      | account | amount | fromAccount |
